@@ -38,8 +38,8 @@ const Login = (props) => {
     const handleLogin = (data) => {
         console.log(data);
         if (data.result) {
-            alert("success");
-            // BiStreetView();
+            // alert("success");
+            saveToken(data.token);
         } else {
             setValidId(false);
             setValidPass(false);
@@ -80,7 +80,7 @@ const Login = (props) => {
                                 <FaLock/>
                             </div>
                             <input onChange={onPassInput} type="password" className="password" placeholder="password"/>
-                            {validId > 0 ?
+                            {pass.length > 0 ?
                                 validPass ?
                                     <div className="indicator theme-bg-carolina"/>
                                 :

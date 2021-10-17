@@ -76,6 +76,10 @@ const App = () => {
         setView("dashboard");
     }
 
+    const saveToken = (token) => {
+        
+    }
+
     switch (view) {
         case "auth":
             return(
