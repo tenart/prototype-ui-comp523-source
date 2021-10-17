@@ -2,7 +2,7 @@ import "./login.css";
 
 import { useState } from "react";
 import Button from "../components/button";
-import apiHandlers from "../apiHandlers";
+import api from "../api";
 
 import { FaUser, FaLock } from 'react-icons/fa';
 
@@ -35,18 +35,25 @@ const Login = (props) => {
         }
     }
 
+    const handleLogin = (data) => {
+        console.log(data);
+        if (data.result) {
+            alert("success");
+            // BiStreetView();
+        } else {
+            setValidId(false);
+            setValidPass(false);
+        }
+    }
+
     const onSubmit = (e) => {
         e.preventDefault();
         const user = {};
         if (validId && validPass) {
             user.name = id;
             user.password = pass;
-        } else {
-            user.name = "Jane Doe";
-            user.password = "password";
+            api.login(user, handleLogin);
         }
-        onLogin(user);
-        // apiHandlers.login(user, (data) => {console.log(data)});
     }
 
     return(
@@ -82,7 +89,7 @@ const Login = (props) => {
                         </div>
                         <div className="divider-10"/>
                         <Button onClick={onSubmit} className="login-button" special>LOG IN</Button>
-                        <Button onClick={(e) => {e.preventDefault()}}>Forgot My Password</Button>
+                        <Button onClick={(e) => {e.preventDefault()}}>Create Account</Button>
                     </form>
                 </div>
                 <div className="login-spacer"/>
