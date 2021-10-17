@@ -1,0 +1,48 @@
+.component-button {
+    background-color: var(--theme-main-01);
+    border-radius: var(--round-sm);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--theme-main);
+    box-shadow: inset 0 0 0 1px var(--theme-border);
+}
+
+.component-button svg {
+    margin-right: 10px;
+}
+
+.component-button:hover {
+    background-color: var(--theme-carolina-02);
+}
+
+.special {
+    background-color: var(--theme-main);
+    color: white;
+    font-weight: bold;
+}
+
+.special:hover {
+    background-color: var(--theme-carolina);
+}
+
+.warn {
+    background-color: var(--theme-red);
+    font-weight: bold;
+    color: white;
+}
+
+.warn:hover {
+    background-color: var(--theme-red);
+}
+
+.go {
+    background-color: var(--theme-green);
+    /* font-weight: bold; */
+    color: white;
+}
+
+.go:hover {
+    background-color: var(--theme-green);
+}

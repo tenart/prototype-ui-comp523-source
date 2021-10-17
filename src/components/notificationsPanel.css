@@ -1,0 +1,49 @@
+.notifications-wrapper h2 {
+    font-size: var(--text-lg);
+    font-weight: bold;
+    color: var(--theme-main);
+}
+
+.notifs {
+    border-radius: var(--round-sm);
+    box-shadow: 0 0 0 1px var(--theme-black-01);
+}
+
+.notif-block {
+    padding: 10px;
+}
+
+.notif-block + .notif-block {
+    border-top: 1px dotted var(--theme-black-01);
+}
+
+.notif-block h3 {
+    color: var(--theme-main);
+    /* font-size: var(--text-lg); */
+    margin-bottom: 5px;
+}
+
+.notif-block p {
+    font-size: var(--text-sm);
+}
+
+.notif-icon {
+    height: 35px;
+    width: 35px;
+    background-color: var(--theme-carolina);
+    border-radius: 9999px;
+    margin-right: 10px;
+}
+
+.badge {
+    background-color: var(--theme-red);
+    font-size: var(--text-sm);
+    color: white;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}

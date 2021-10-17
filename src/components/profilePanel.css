@@ -1,0 +1,91 @@
+.account-wrapper {
+}
+
+.account-field {
+    margin-bottom: 5px;
+    /* margin-top: 20px; */
+    font-size: var(--text-sm);
+    /* color: var(--theme-black-07); */
+}
+
+.user-name {
+    color: var(--theme-main);
+    font-size: var(--text-lg);
+    font-weight: bold;
+}
+
+.user-email {
+    /* color: var(--theme-black-07); */
+    font-size: var(--text-sm);
+    /* font-style: italic; */
+}
+
+.user-type {
+    color: var(--theme-main);
+    /* font-size: var(--text-sm); */
+    /* margin-bottom: 5px; */
+    text-transform: capitalize;
+}
+
+.avatar-banner {
+    background-color: var(--theme-carolina-01);
+    padding: 20px;
+}
+
+.panel.small .avatar-banner {
+    margin: -20px 20px -20px -20px;
+    border-radius: var(--round-sm);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 1px 0 0 0 var(--theme-black-01);
+}
+
+.panel.small .user-name {
+    margin-bottom: 10px;
+}
+
+.panel.small .user-type {
+    margin-bottom: 5px;
+}
+
+.panel.big .avatar-wrapper, .panel.small .avatar-wrapper {
+    height: 60px;
+    width: 60px;
+}
+
+.panel.big .avatar-banner {
+    margin: -20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 0 0 var(--theme-black-01);
+    align-items: center;
+}
+
+.panel.big .user-name,
+.panel.big .user-email,
+.panel.big .user-type {
+    font-size: var(--text-md);
+    color: var(--theme-main);
+}
+
+.avatar-wrapper {
+    height: 50px;
+    width: 50px;
+    background-color: var(--theme-carolina);
+    border-radius: 999px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px var(--theme-black-01);
+}
+
+.avatar-wrapper svg {
+    height: 50%;
+    width: 50%;
+}
+
+.account-bottom {
+    display: flex;
+}
