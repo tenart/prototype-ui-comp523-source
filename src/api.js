@@ -61,6 +61,35 @@ const api = {
                 console.log(error);
             })
     },
+    get_test: (token, callback) => {
+        const path = `${url}/test/`;
+        axios
+            .get(path, {params: {
+                token: token
+            }})
+            .then((response) => {
+                callback(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },
+    post_test_create: (test, callback) => {
+        const path = `${url}/test/create`;
+        axios
+            .post(path, {
+                name: test.name,
+                template: test.template,
+                fields: test.fields,
+                token: test.token
+            })
+            .then((response) => {
+                callback(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },
 
     // TODO 
 

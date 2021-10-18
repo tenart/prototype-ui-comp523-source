@@ -1,0 +1,23 @@
+.test-name-input {
+    box-shadow: inset 0 0 0 1px var(--theme-border);
+    padding: 10px;
+    border-radius: var(--round-sm);
+    width: 100%;
+}
+
+.templates-picker {
+    border-radius: var(--round-sm);
+    box-shadow: inset 0 0 0 1px var(--theme-border);
+}
+
+.templates-picker label {
+    margin-left: 10px;
+}
+
+.template-option {
+    padding: 10px;
+}
+
+.template-option + .template-option {
+    border-top: 1px solid var(--theme-border);
+}

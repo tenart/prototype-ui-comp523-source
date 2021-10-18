@@ -79,8 +79,8 @@ const TemplateBlock = (props) => {
     return(
         <tr>
             <td>{template.name}</td>
-            <td>{technicianCount}</td>
-            <td>{pathologistCount}</td>
+            <td style={{textAlign: "center"}}>{technicianCount}</td>
+            <td style={{textAlign: "center"}}>{pathologistCount}</td>
         </tr>
     )
 }
@@ -122,7 +122,7 @@ const ManageTemplates = (props) => {
         return(
             <p style={css.blankMessage}>
                 <FaInfoCircle style={{marginRight: "5px"}}/>
-                No templates. Create a template below.
+                No templates. Create a new template below.
             </p>
         );
     }
@@ -143,8 +143,8 @@ const ManageTemplates = (props) => {
                             <thead>
                                 <tr>
                                     <td>Template Name</td>
-                                    <td>Tech. Columns</td>
-                                    <td>Path. Columns</td>
+                                    <td style={{textAlign: "center"}}>Tech. Columns</td>
+                                    <td style={{textAlign: "center"}}>Path. Columns</td>
                                 </tr>
                             </thead>
                             <tbody>

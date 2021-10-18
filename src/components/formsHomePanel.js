@@ -72,21 +72,22 @@ const FormsHomePanel = (props) => {
             </h2>
             <div className="spacer-20"/>
             <div>
-                <FormButton 
+                {/* <FormButton 
                     title="Continue"
                     subtitle="Resume where you left off"
                     icon={{icon: <FaChevronRight/>, color: "var(--theme-green)"}}
                     onClick={() => {setView("data")}}
-                />
-                <FormButton 
+                /> */}
+                {/* <FormButton 
                     title="Revisit Slides"
                     subtitle="See slides that need your attention"
                     icon={{icon: <FaSearch/>, color: "var(--theme-green)"}}
-                />                
+                />                 */}
                 <FormButton 
                     title="New Test"
                     subtitle="Create a new test"
                     icon={{icon: <FaPlus/>, color: "var(--theme-green)"}}
+                    onClick={() => {setView("data")}}
                 />
             </div>
             <div className="spacer-10 flex-grow"/>
