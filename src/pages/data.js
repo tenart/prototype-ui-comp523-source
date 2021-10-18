@@ -2,6 +2,7 @@
 
 // import FormsPreview from "../components/formsPreview";
 import { useState } from "react";
+import CreateLog from "../components/createLog";
 import CreateTest from "../components/createTest";
 import Header from "../components/header";
 import ManageTests from "../components/manageTests";
@@ -31,15 +32,18 @@ const Data = (props) => {
                 setView={setView}
             />
             <div className={showSidebar ? "main-content small" : "main-content big"}>
-                {/* <FormsPreview/> */}
-                {/* <ResumeFormPanel/> */}
                 {dataView === "manage" ? 
                     <ManageTests setDataView={setDataView}/>
                     :
                     <></>
                 }
-                {dataView === "create" ? 
+                {dataView === "create-test" ? 
                     <CreateTest setDataView={setDataView}/>
+                    :
+                    <></>
+                }
+                {dataView === "create-log" ? 
+                    <CreateLog setDataView={setDataView}/>
                     :
                     <></>
                 }

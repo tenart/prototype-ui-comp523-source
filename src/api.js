@@ -90,6 +90,35 @@ const api = {
                 console.log(error);
             })
     },
+    post_log_create: (log, callback) => {
+        const path = `${url}/log/create`;
+        axios
+            .post(path, {
+                name: log.name,
+                template: log.template,
+                test: log.test,
+                token: log.token
+            })
+            .then((response) => {
+                callback(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },
+    get_log: (id, token, callback) => {
+        const path = `${url}/log/${id}/`;
+        axios
+            .get(path, {params: {
+                token: token
+            }})
+            .then((response) => {
+                callback(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },
 
     // TODO 
 

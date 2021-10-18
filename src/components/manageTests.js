@@ -4,6 +4,7 @@ import api from "../api";
 import Button from "./button";
 
 const TestBlock = (props) => {
+    const setDataView = props.setDataView;
     const test = props.test
     return(
         <tr>
@@ -12,7 +13,7 @@ const TestBlock = (props) => {
             </td>
             <td style={{textAlign: "center", display: "flex"}}>
                 <div className="flex-grow"/>
-                <Button go>Log this Test</Button>
+                <Button go onClick={() => {setDataView("create-log")}}>New Log</Button>
                 <div className="flex-grow"/>
             </td>
         </tr>
@@ -71,13 +72,17 @@ const ManageTests = (props) => {
                     </thead>
                     <tbody>
                         {tests.map((test, i) => {return(
-                            <TestBlock test={test} key={i}/>
+                            <TestBlock
+                                setDataView={setDataView}
+                                test={test} 
+                                key={i}
+                            />
                         )})}
                     </tbody>
                 </table>
             }
             <div className="spacer-20"/>
-            <Button onClick={() => {setDataView("create")}}>Create New Test</Button>
+            <Button onClick={() => {setDataView("create-test")}}>Create New Test</Button>
         </div>
     )
 }
