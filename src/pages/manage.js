@@ -1,10 +1,14 @@
 // import "./dashboard.css";
 
-import FormsPreview from "../components/formsPreview";
+import ManageTemplates from "../components/manageTemplates";
 import Header from "../components/header";
 import Sidebar from "../components/sidebar";
+import CreateTemplate from "../components/createTemplate";
+import { useState } from "react";
 
 const Manage = (props) => {
+
+    const [manageView, setManageView] = useState("manage");
     const setView = props.setView;
     const menuItems = props.menuItems;
     const showSidebar = props.showSidebar;
@@ -15,7 +19,7 @@ const Manage = (props) => {
             <Header 
                 showSidebar={showSidebar} 
                 setShowSidebar={setShowSidebar}
-                title="Manage Forms"
+                title="Manage Templates"
             />
             <Sidebar 
                 showSidebar={showSidebar}
@@ -24,7 +28,16 @@ const Manage = (props) => {
                 setView={setView}
             />
             <div className={showSidebar ? "main-content small" : "main-content big"}>
-                <FormsPreview/>
+                {manageView === "manage" ? 
+                    <ManageTemplates setManageView={setManageView}/>
+                    :
+                    <></>
+                }
+                {manageView === "create" ? 
+                    <CreateTemplate setManageView={setManageView}/>
+                    :
+                    <></>
+                }
             </div>
         </>
     );

@@ -10,14 +10,14 @@ import Profile from "./pages/profile";
 import Settings from "./pages/settings";
 import Data from "./pages/data";
 
-import { GoGear } from "react-icons/go";
+// import { GoGear } from "react-icons/go";
 import { MdDashboard } from "react-icons/md";
 import { FaBell, FaUser } from "react-icons/fa";
 import { AiFillProfile } from "react-icons/ai";
 
 const App = () => {
     const [user, setUser] = useState(undefined);
-    const [view, setView] = useState("login");
+    const [view, setView] = useState("dashboard");
     const [showSidebar, setShowSidebar] = useState(false);
     const menuItems = [
         {
@@ -71,19 +71,19 @@ const App = () => {
         }
     ];
 
-    const logIn = (user) => {
-        setUser(user);
+    const logIn = (name, token) => {
+        setUser({
+            name: name,
+            token: token
+        });
+        localStorage.setItem("token", token);
         setView("dashboard");
-    }
-
-    const saveToken = (token) => {
-        
     }
 
     switch (view) {
         case "auth":
             return(
-                <Login onLogin={logIn}/>
+                <Login onLogIn={logIn}/>
             );
         case "dashboard":
             return(
@@ -143,7 +143,7 @@ const App = () => {
             );
         default:
             return(
-                <Login onLogin={logIn}/>
+                <Login onLogIn={logIn}/>
             );
     }
 }

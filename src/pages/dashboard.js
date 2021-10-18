@@ -5,7 +5,7 @@ import Sidebar from "../components/sidebar";
 
 import ProfilePanel from "../components/profilePanel";
 import NotificationsPanel from "../components/notificationsPanel";
-import FormsPreview from "../components/formsPreview";
+import ManageTemplates from "../components/manageTemplates";
 import FormsHomePanel from "../components/formsHomePanel";
 
 const Dashboard = (props) => {

@@ -5,7 +5,6 @@ import { FaPlus, FaSearch, FaChevronRight } from"react-icons/fa";
 const FormButton = (props) => {
 
     const onClick = props.onClick;
-
     const title = props.title;
     const subtitle = props.subtitle;
     const icon = props.icon.icon;
