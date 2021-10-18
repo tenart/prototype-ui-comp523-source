@@ -17,6 +17,8 @@ const TableRow = (props) => {
 
 const ResumeFormPanel = (props) => {
 
+    const setDataView = props.setDataView;
+
     const [table, updateTable] = useState([
         ["1/22/21", "Block 1", "ER", "", "100"],
         ["2/22/21", "Block 3", "ER", "Endocervix, Cervix, Tonsil", "100"],
@@ -78,6 +80,8 @@ const ResumeFormPanel = (props) => {
                 <Button go>Submit Row</Button>
                 <div className="spacer-10 flex-grow"/>
                 <Button>Clear</Button>
+                <div className="spacer-10"/>
+                <Button warn onClick={() => {setDataView("manage")}}>Cancel</Button>
             </div>
 
             {/* <div className="spacer-20"/>

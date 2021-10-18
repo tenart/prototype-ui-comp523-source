@@ -17,7 +17,7 @@ import { AiFillProfile } from "react-icons/ai";
 
 const App = () => {
     const [user, setUser] = useState(undefined);
-    const [view, setView] = useState("dashboard");
+    const [view, setView] = useState("login");
     const [showSidebar, setShowSidebar] = useState(false);
     const menuItems = [
         {

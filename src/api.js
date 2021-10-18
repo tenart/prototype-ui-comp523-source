@@ -106,7 +106,20 @@ const api = {
                 console.log(error);
             })
     },
-    get_log: (id, token, callback) => {
+    get_log: (token, callback) => {
+        const path = `${url}/log/`;
+        axios
+            .get(path, {params: {
+                token: token
+            }})
+            .then((response) => {
+                callback(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },
+    get_log_id: (id, token, callback) => {
         const path = `${url}/log/${id}/`;
         axios
             .get(path, {params: {

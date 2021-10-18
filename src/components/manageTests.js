@@ -5,7 +5,15 @@ import Button from "./button";
 
 const TestBlock = (props) => {
     const setDataView = props.setDataView;
+    const setNewIds = props.setNewIds;
+
     const test = props.test
+
+    const newLogFromTest = () => {
+        setNewIds([test.name, test.id, test.template]);
+        setDataView("create-log");
+    }
+
     return(
         <tr>
             <td>
@@ -13,7 +21,9 @@ const TestBlock = (props) => {
             </td>
             <td style={{textAlign: "center", display: "flex"}}>
                 <div className="flex-grow"/>
-                <Button go onClick={() => {setDataView("create-log")}}>New Log</Button>
+                <Button go onClick={newLogFromTest}>
+                    New Log
+                </Button>
                 <div className="flex-grow"/>
             </td>
         </tr>
@@ -23,6 +33,7 @@ const TestBlock = (props) => {
 const ManageTests = (props) => {
 
     const setDataView = props.setDataView;
+    const setNewIds = props.setNewIds;
     const [tests, setTests] = useState([]);
 
     useEffect(() => {
@@ -74,6 +85,7 @@ const ManageTests = (props) => {
                         {tests.map((test, i) => {return(
                             <TestBlock
                                 setDataView={setDataView}
+                                setNewIds={setNewIds}
                                 test={test} 
                                 key={i}
                             />
